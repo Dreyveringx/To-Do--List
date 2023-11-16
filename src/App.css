@@ -1,0 +1,237 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--rojo: #ba181b;
+	--azul: #00b4d8;
+	--azul-hover: #48cae4;
+	--rojo-hover: #e5383b;
+	--verde: #09a129;
+}
+
+body {
+	background-image: url(assets/Navidad.jpeg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: Poppins;
+	font-size: 1.2vw;
+	max-width: 1200px;
+	margin: 100px auto;
+	display: flex;
+	justify-content: center;
+}
+
+.card-to-do {
+	background-color: #fff;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	padding: 25px;
+	border-radius: 20px;
+	width: 100%;
+}
+
+h1 {
+	text-align: center;
+}
+
+.counter-todos {
+	margin: 40px 0;
+	display: flex;
+	justify-content: space-around;
+}
+
+.counter-todos span {
+	color: #ff3300;
+	font-weight: 700;
+	font-size: 24px;
+	margin-left: 10px;
+}
+
+ul {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+ul li {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+ul li span {
+	overflow: hidden;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+ul li form {
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+}
+
+.input-update {
+	border: none;
+	font-weight: 500;
+	font-family: inherit;
+	font-size: 18px;
+	color: #555;
+	width: 100%;
+}
+
+.container-done {
+	background-color: white;
+	width: 24px;
+	height: 24px;
+	border-radius: 20px;
+	border: 2px solid var(--verde);
+	cursor: pointer;
+}
+
+.container-done.active {
+	background-color: var(--verde);
+}
+
+.text-decoration-dashed {
+	text-decoration: line-through;
+}
+
+.btn-delete {
+	background-color: var(--rojo);
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	transition: all 0.3s;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.btn-delete:hover {
+	background-color: var(--rojo-hover);
+}
+
+.btn-edit {
+	background-color: var(--azul);
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	transition: all 0.3s;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.btn-edit:hover {
+	background-color: var(--azul-hover);
+}
+
+form {
+	display: flex;
+	gap: 20px;
+}
+
+.add-todo h3 {
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 24px;
+}
+
+.input-add {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+	border-radius: 20px;
+	flex: 1;
+	font-family: inherit;
+	font-size: 17px;
+	color: #555;
+}
+
+.btn-add {
+	border: none;
+	background-color: #ff643c;
+	color: #fff;
+	padding: 5px 40px;
+	border-radius: 20px;
+	font-family: inherit;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+.btn-add:hover {
+	background-color: #ff3300;
+}
+
+@media screen and (max-width: 768px) {
+    .card-to-do {
+        width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
+    }
+
+    ul li {
+        flex-direction: column; /* Cambia la disposición de la lista en pantallas más pequeñas */
+    }
+
+    .counter-todos {
+        flex-direction: column; /* Cambia la disposición del contador en pantallas más pequeñas */
+        text-align: center; /* Centra el texto en pantallas más pequeñas */
+    }
+
+    .counter-todos h3 {
+        margin-bottom: 10px; /* Reduzca el margen inferior en pantallas más pequeñas */
+    }
+
+    .counter-todos span {
+        margin-left: 0; /* Elimina el margen izquierdo en pantallas más pequeñas */
+    }
+
+    ul li span {
+        justify-content: flex-start; /* Ajusta la alineación del contenido en pantallas más pequeñas */
+    }
+
+    ul li form {
+        flex-direction: column; /* Ajusta la disposición del formulario en pantallas más pequeñas */
+    }
+
+    .input-update {
+        width: 100%; /* Ajusta el ancho del input en pantallas más pequeñas */
+    }
+
+    .btn-delete,
+    .btn-edit {
+        font-size: 14px; /* Reduzca el tamaño de fuente de los botones en pantallas más pequeñas */
+    }
+
+    .add-todo h3 {
+        font-size: 20px; /* Ajusta el tamaño de fuente del encabezado en pantallas más pequeñas */
+        margin-bottom: 20px; /* Reduzca el margen inferior en pantallas más pequeñas */
+    }
+
+    .input-add {
+        padding: 10px; /* Ajusta el padding del input en pantallas más pequeñas */
+        font-size: 16px; /* Ajusta el tamaño de fuente del input en pantallas más pequeñas */
+    }
+
+    .btn-add {
+        padding: 8px 20px; /* Ajusta el padding del botón en pantallas más pequeñas */
+        font-size: 16px; /* Ajusta el tamaño de fuente del botón en pantallas más pequeñas */
+    }
+}
+
+
